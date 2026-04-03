@@ -595,7 +595,7 @@
   </div>
   <h1>
     결하다 첫 오픈<br>
-    <span class="highlight">초기 유저 설정 &amp; 마케팅 전략</span>
+    <span class="highlight">초기 유저 설정 &amp; <span style="white-space:nowrap;">마케팅 전략</span></span>
   </h1>
   <p class="hero-sub">
     "가입비 없는 결정사" 포지셔닝에 부합하는 초기 타겟 유저를 정의하고,<br>
@@ -632,10 +632,13 @@
         <div class="label">여성 평균 초혼 연령<br>(2024년 기준)</div>
       </div>
       <div class="stat-box">
-        <div class="num gold">₩100만+</div>
-        <div class="label">결혼정보회사 평균<br>가입비 (듀오/가연)</div>
+        <div class="num gold">200~400만</div>
+        <div class="label">결혼정보회사 일반<br>가입비 (2025 기준)</div>
       </div>
     </div>
+    <p style="font-size:11px; color:var(--text-muted); margin-top:12px; text-align:right;">
+      출처: 국가데이터처 「2024년 혼인·이혼통계」(2025.3.20 발표) / 결정사 가입비: 나무위키·캐시코드 종합
+    </p>
 
     <div class="callout" style="margin-top:40px;">
       <div class="callout-label purple">Market Gap</div>
@@ -1022,175 +1025,242 @@
 <section>
   <div class="container">
     <div class="section-num">Section 06</div>
-    <h2 class="section-title">예비 사용자 의견 파악 프레임워크</h2>
+    <h2 class="section-title">예비 사용자 의견 파악 — 실제 데이터 기반</h2>
     <p class="section-desc">
-      런칭 전 예비 유저의 반응을 구조적으로 파악하기 위한 조사 설계입니다.
-      실행 방법: 사전등록 유저 + 결맞음 이벤트 참가자 대상 설문 + 1:1 인터뷰.
+      기존 공개 조사 데이터에서 결하다의 타겟 유저 행동을 예측할 수 있는 핵심 지표를 추출합니다.
+      각 데이터에는 출처를 명시했으며, 아직 검증되지 않은 결하다 고유 가설은 별도로 구분합니다.
     </p>
 
-    <!-- 가상 예상 응답 데이터 -->
-    <div class="callout gold" style="margin-top: 32px;">
-      <div class="callout-label gold">참고: 예상 응답 시뮬레이션</div>
-      <p>
-        아래 데이터는 유사 서비스 사용자 조사 및 결혼정보회사 관련 설문 결과를 바탕으로 한 예상 응답 분포입니다. 실제 사전등록 유저 대상 설문으로 검증이 필요합니다.
-      </p>
-    </div>
+    <!-- ── Part A: 실제 데이터 기반 인사이트 ── -->
+    <h3 style="font-weight:600; font-size:18px; margin-top:48px; margin-bottom:8px;">A. 검증된 외부 데이터</h3>
+    <p style="font-size:13px; color:var(--text-muted); margin-bottom:28px;">아래 수치는 모두 공개 조사에서 발췌한 실제 데이터입니다.</p>
 
     <div class="survey-grid">
-      <!-- Q1 -->
+      <!-- Data 1: 결혼 의향 -->
       <div class="survey-item">
-        <div class="survey-q">Q1. 결혼정보회사를 이용하지 않은 가장 큰 이유는?</div>
+        <div class="survey-q">미혼자 결혼 의향 (성별)</div>
         <div class="survey-bar">
-          <span class="bar-label">가입비 부담</span>
-          <div class="bar-track"><div class="bar-fill" style="width:62%; background:var(--coral);"></div></div>
-          <span class="bar-pct">62%</span>
+          <span class="bar-label">남성 "의향 있다"</span>
+          <div class="bar-track"><div class="bar-fill" style="width:60.8%; background:var(--accent);"></div></div>
+          <span class="bar-pct">60.8%</span>
         </div>
         <div class="survey-bar">
-          <span class="bar-label">아직 그 단계 아님</span>
-          <div class="bar-track"><div class="bar-fill" style="width:18%; background:var(--accent);"></div></div>
-          <span class="bar-pct">18%</span>
+          <span class="bar-label">여성 "의향 있다"</span>
+          <div class="bar-track"><div class="bar-fill" style="width:47.6%; background:var(--pink);"></div></div>
+          <span class="bar-pct">47.6%</span>
         </div>
-        <div class="survey-bar">
-          <span class="bar-label">주변 시선</span>
-          <div class="bar-track"><div class="bar-fill" style="width:12%; background:var(--teal);"></div></div>
-          <span class="bar-pct">12%</span>
-        </div>
-        <div class="survey-bar">
-          <span class="bar-label">신뢰 부족</span>
-          <div class="bar-track"><div class="bar-fill" style="width:8%; background:var(--gold);"></div></div>
-          <span class="bar-pct">8%</span>
-        </div>
+        <p style="font-size:11px; color:var(--text-muted); margin-top:10px; line-height:1.6;">
+          📎 인구보건복지협회, 「제3차 국민인구행태조사」 (만 20~44세 2,050명 대상, 2025.9 실시, 2026.2.1 발표)<br>
+          → <strong>결하다 시사점:</strong> 여성 결혼 의향이 남성보다 13.2%p 낮음. 초기 여성 유저 확보가 더 어려울 것이며, 여성 타겟 인센티브 설계가 필수.
+        </p>
       </div>
 
-      <!-- Q2 -->
+      <!-- Data 2: 미혼 이유 -->
       <div class="survey-item">
-        <div class="survey-q">Q2. "만남당 10만원 결제" 모델에 대한 인식은?</div>
+        <div class="survey-q">미혼자가 결혼하지 않은 이유</div>
         <div class="survey-bar">
-          <span class="bar-label">합리적이다</span>
-          <div class="bar-track"><div class="bar-fill" style="width:54%; background:var(--teal);"></div></div>
-          <span class="bar-pct">54%</span>
-        </div>
-        <div class="survey-bar">
-          <span class="bar-label">괜찮은 편</span>
-          <div class="bar-track"><div class="bar-fill" style="width:28%; background:var(--accent);"></div></div>
-          <span class="bar-pct">28%</span>
-        </div>
-        <div class="survey-bar">
-          <span class="bar-label">비싼 편</span>
-          <div class="bar-track"><div class="bar-fill" style="width:12%; background:var(--coral);"></div></div>
-          <span class="bar-pct">12%</span>
-        </div>
-        <div class="survey-bar">
-          <span class="bar-label">잘 모르겠다</span>
-          <div class="bar-track"><div class="bar-fill" style="width:6%; background:var(--gold);"></div></div>
-          <span class="bar-pct">6%</span>
-        </div>
-      </div>
-
-      <!-- Q3 -->
-      <div class="survey-item">
-        <div class="survey-q">Q3. 매칭에서 가장 중요한 기준은?</div>
-        <div class="survey-bar">
-          <span class="bar-label">가치관/성격 궁합</span>
-          <div class="bar-track"><div class="bar-fill" style="width:45%; background:var(--accent);"></div></div>
+          <span class="bar-label">경제적 여유 없음</span>
+          <div class="bar-track"><div class="bar-fill" style="width:45%; background:var(--coral);"></div></div>
           <span class="bar-pct">45%</span>
         </div>
         <div class="survey-bar">
-          <span class="bar-label">경제력/직업</span>
-          <div class="bar-track"><div class="bar-fill" style="width:25%; background:var(--gold);"></div></div>
-          <span class="bar-pct">25%</span>
+          <span class="bar-label">적당한 상대 미만남</span>
+          <div class="bar-track"><div class="bar-fill" style="width:41%; background:var(--accent);"></div></div>
+          <span class="bar-pct">41%</span>
         </div>
-        <div class="survey-bar">
-          <span class="bar-label">외모/첫인상</span>
-          <div class="bar-track"><div class="bar-fill" style="width:18%; background:var(--coral);"></div></div>
-          <span class="bar-pct">18%</span>
-        </div>
-        <div class="survey-bar">
-          <span class="bar-label">생활 패턴</span>
-          <div class="bar-track"><div class="bar-fill" style="width:12%; background:var(--teal);"></div></div>
-          <span class="bar-pct">12%</span>
-        </div>
+        <p style="font-size:11px; color:var(--text-muted); margin-top:10px; line-height:1.6;">
+          📎 한국리서치, 「2025 결혼인식조사」 (성인 1,000명, 2025.6 발표, hrcopinion.co.kr)<br>
+          → <strong>결하다 시사점:</strong> "적당한 상대를 못 만남"이 41%로 2위. 이 그룹이 결하다의 핵심 타겟 — 의향은 있으나 만남 채널이 없는 층.
+        </p>
       </div>
 
-      <!-- Q4 -->
+      <!-- Data 3: 결혼 의향 없는 구체적 이유 (성별) -->
       <div class="survey-item">
-        <div class="survey-q">Q4. "성격 분석 기반 매칭"에 대한 기대감은?</div>
+        <div class="survey-q">결혼 의향 없는/망설이는 이유 (성별 1위)</div>
         <div class="survey-bar">
-          <span class="bar-label">매우 기대</span>
-          <div class="bar-track"><div class="bar-fill" style="width:38%; background:var(--accent);"></div></div>
-          <span class="bar-pct">38%</span>
+          <span class="bar-label">남성: 비용 부담</span>
+          <div class="bar-track"><div class="bar-fill" style="width:24.5%; background:var(--gold);"></div></div>
+          <span class="bar-pct">24.5%</span>
         </div>
         <div class="survey-bar">
-          <span class="bar-label">기대하는 편</span>
-          <div class="bar-track"><div class="bar-fill" style="width:40%; background:var(--teal);"></div></div>
+          <span class="bar-label">여성: 기대맞는상대없음</span>
+          <div class="bar-track"><div class="bar-fill" style="width:18.3%; background:var(--pink);"></div></div>
+          <span class="bar-pct">18.3%</span>
+        </div>
+        <p style="font-size:11px; color:var(--text-muted); margin-top:10px; line-height:1.6;">
+          📎 인구보건복지협회, 「제3차 국민인구행태조사」 (2026.2.1 발표)<br>
+          → <strong>결하다 시사점:</strong> 남성에겐 "가입비 없는 결정사" 가격 프레임이, 여성에겐 "성격 궁합 기반 정밀 매칭" 품질 프레임이 각각 핵심 소구점.
+        </p>
+      </div>
+
+      <!-- Data 4: 연인 만남 경로 -->
+      <div class="survey-item">
+        <div class="survey-q">현재 연인을 처음 만난 경로 (2030세대)</div>
+        <div class="survey-bar">
+          <span class="bar-label">소개팅</span>
+          <div class="bar-track"><div class="bar-fill" style="width:25.8%; background:var(--accent);"></div></div>
+          <span class="bar-pct">25.8%</span>
+        </div>
+        <div class="survey-bar">
+          <span class="bar-label">학교/학과</span>
+          <div class="bar-track"><div class="bar-fill" style="width:21.4%; background:var(--teal);"></div></div>
+          <span class="bar-pct">21.4%</span>
+        </div>
+        <div class="survey-bar">
+          <span class="bar-label">직장</span>
+          <div class="bar-track"><div class="bar-fill" style="width:16.4%; background:var(--gold);"></div></div>
+          <span class="bar-pct">16.4%</span>
+        </div>
+        <div class="survey-bar">
+          <span class="bar-label">데이팅 앱 (30대)</span>
+          <div class="bar-track"><div class="bar-fill" style="width:10.5%; background:var(--coral);"></div></div>
+          <span class="bar-pct">~10%</span>
+        </div>
+        <p style="font-size:11px; color:var(--text-muted); margin-top:10px; line-height:1.6;">
+          📎 대학내일 20대연구소, 「2030 남녀의 연애 인식 및 행태 조사」 (20slab.org)<br>
+          → <strong>결하다 시사점:</strong> 30대 초중반에서 데이팅 앱 만남 비율 약 10%. 소개팅(25.8%)이 압도적 1위이므로, "앱 기반 소개팅"이라는 포지셔닝이 유효.
+        </p>
+      </div>
+
+      <!-- Data 5: 데이팅앱 미이용 이유 -->
+      <div class="survey-item">
+        <div class="survey-q">데이팅 앱을 이용하지 않은 이유</div>
+        <div class="survey-bar">
+          <span class="bar-label">진정성 부족</span>
+          <div class="bar-track"><div class="bar-fill" style="width:75.7%; background:var(--coral);"></div></div>
+          <span class="bar-pct">75.7%</span>
+        </div>
+        <p style="font-size:11px; color:var(--text-muted); margin-top:10px; line-height:1.6;">
+          📎 고대신문, 2·30대 대상 데이팅앱 사용 현황 설문 (응답자 217명, 2024.6)<br>
+          → <strong>결하다 시사점:</strong> 앱 기반 만남의 최대 장벽은 "진정성 부족". 직장 인증 + 24문항 성격 분석 + 만남당 ₩100,000 결제가 진정성 시그널로 작동할 수 있음.
+        </p>
+      </div>
+
+      <!-- Data 6: 데이팅앱 성비 -->
+      <div class="survey-item">
+        <div class="survey-q">국내 데이팅 앱 성비 현황</div>
+        <div class="survey-bar">
+          <span class="bar-label">위피 남성</span>
+          <div class="bar-track"><div class="bar-fill" style="width:60%; background:var(--accent);"></div></div>
+          <span class="bar-pct">60%</span>
+        </div>
+        <div class="survey-bar">
+          <span class="bar-label">위피 여성</span>
+          <div class="bar-track"><div class="bar-fill" style="width:40%; background:var(--pink);"></div></div>
           <span class="bar-pct">40%</span>
         </div>
-        <div class="survey-bar">
-          <span class="bar-label">반신반의</span>
-          <div class="bar-track"><div class="bar-fill" style="width:17%; background:var(--gold);"></div></div>
-          <span class="bar-pct">17%</span>
-        </div>
-        <div class="survey-bar">
-          <span class="bar-label">관심 없음</span>
-          <div class="bar-track"><div class="bar-fill" style="width:5%; background:var(--coral);"></div></div>
-          <span class="bar-pct">5%</span>
-        </div>
+        <p style="font-size:11px; color:var(--text-muted); margin-top:10px; line-height:1.6;">
+          📎 센서타워 (Sensor Tower), 위피 인구 분포 데이터 — "업계 내 매우 균형 잡힌 성비"로 평가됨<br>
+          → <strong>결하다 시사점:</strong> 업계 최선 수준이 60:40. 결하다 목표 55:45는 도전적이며, 여성 우선 확보 전략 없이는 달성 어려움.
+        </p>
       </div>
+    </div>
 
-      <!-- Q5 -->
-      <div class="survey-item">
-        <div class="survey-q">Q5. 결하다를 알게 된다면 어떤 채널이 가장 자연스러운가?</div>
-        <div class="survey-bar">
-          <span class="bar-label">인스타그램/릴스</span>
-          <div class="bar-track"><div class="bar-fill" style="width:35%; background:var(--pink);"></div></div>
-          <span class="bar-pct">35%</span>
-        </div>
-        <div class="survey-bar">
-          <span class="bar-label">지인 추천</span>
-          <div class="bar-track"><div class="bar-fill" style="width:28%; background:var(--accent);"></div></div>
-          <span class="bar-pct">28%</span>
-        </div>
-        <div class="survey-bar">
-          <span class="bar-label">네이버 검색</span>
-          <div class="bar-track"><div class="bar-fill" style="width:22%; background:var(--teal);"></div></div>
-          <span class="bar-pct">22%</span>
-        </div>
-        <div class="survey-bar">
-          <span class="bar-label">유튜브</span>
-          <div class="bar-track"><div class="bar-fill" style="width:15%; background:var(--coral);"></div></div>
-          <span class="bar-pct">15%</span>
-        </div>
+    <!-- ── Part B: 추가 정량 맥락 ── -->
+    <h3 style="font-weight:600; font-size:18px; margin-top:48px; margin-bottom:8px;">B. 시장 맥락 데이터</h3>
+
+    <table class="data-table" style="margin-top:20px;">
+      <thead>
+        <tr>
+          <th style="width:35%">지표</th>
+          <th style="width:25%">수치</th>
+          <th style="width:40%">출처</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>미혼자 중 결혼 의향 있음</strong></td>
+          <td>44% (전체), 30세 이하 52%</td>
+          <td>한국리서치, 2025 결혼인식조사 (n=1,000)</td>
+        </tr>
+        <tr>
+          <td><strong>결혼 비용 부담 비율</strong></td>
+          <td>남성 59 : 여성 41</td>
+          <td>듀오 설문조사 (2025)</td>
+        </tr>
+        <tr>
+          <td><strong>결정사 가입자 주 연령대</strong></td>
+          <td>33~35세가 대부분</td>
+          <td>블라인드 커뮤니티, 결정사 후기 (듀오/가연 매니저 확인)</td>
+        </tr>
+        <tr>
+          <td><strong>결정사 가입비 (2025 기준)</strong></td>
+          <td>일반 200~400만원, VIP 1,000만원+</td>
+          <td>나무위키 결혼정보회사 문서 (2025), 각 업체 공개 정보 종합</td>
+        </tr>
+        <tr>
+          <td><strong>국내 데이팅앱 시장 규모</strong></td>
+          <td>2024년 471억원, 2028년 예상 사용자 580만명</td>
+          <td>스태티스타 (Statista), 국내 온라인 데이팅 시장 보고서</td>
+        </tr>
+        <tr>
+          <td><strong>이상적 결혼 나이 (국민 인식)</strong></td>
+          <td>남성 32.6세, 여성 30.1세</td>
+          <td>한국리서치, 2025 결혼인식조사</td>
+        </tr>
+        <tr>
+          <td><strong>"결혼은 혜택보다 부담"에 동의</strong></td>
+          <td>55.0%</td>
+          <td>인구보건복지협회, 제3차 국민인구행태조사 (2026.2)</td>
+        </tr>
+        <tr>
+          <td><strong>2024년 혼인건수 / 전년대비</strong></td>
+          <td>22만 2천건 / +14.8%</td>
+          <td>국가데이터처, 2024년 혼인·이혼통계 (2025.3.20 발표)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ── Part C: 결하다 고유 가설 (미검증) ── -->
+    <h3 style="font-weight:600; font-size:18px; margin-top:48px; margin-bottom:8px;">C. 결하다 고유 가설 — 사전 설문으로 검증 필요</h3>
+
+    <div class="callout gold" style="margin-top:16px;">
+      <div class="callout-label gold">⚠️ 주의: 아래는 외부 데이터에서 유추한 가설이며, 실제 수치가 아닙니다</div>
+      <p>결하다의 고유 모델(만남당 결제, 24문항 온보딩, Big Five 매칭)에 대한 반응은 기존 조사에 존재하지 않으므로, 사전등록 유저 대상 설문으로 직접 검증해야 합니다.</p>
+    </div>
+
+    <div class="card-grid cols-2" style="margin-top:24px;">
+      <div class="card">
+        <div class="card-icon gold">❓</div>
+        <h3>가설 1: "만남당 10만원" 가격 수용도</h3>
+        <p>
+          <strong>유추 근거:</strong> 결정사 가입비 200~400만원 대비 만남당 10만원은 산술적으로 1/20~1/40 수준. 남성의 결혼 미루는 이유 1위가 "비용 부담(24.5%)"이므로, 이 가격 프레임이 수용될 가능성이 높으나 <strong>실제 지불 의향은 별도 검증 필요.</strong>
+          <br><br>
+          <strong>설문 문항 제안:</strong> "결혼정보회사가 가입비 없이 만남당 ₩100,000만 받는다면 이용 의향이 있습니까?"
+        </p>
       </div>
-
-      <!-- Q6 -->
-      <div class="survey-item">
-        <div class="survey-q">Q6. 24문항 성격 분석 온보딩에 대한 반응은?</div>
-        <div class="survey-bar">
-          <span class="bar-label">해볼 만하다</span>
-          <div class="bar-track"><div class="bar-fill" style="width:48%; background:var(--teal);"></div></div>
-          <span class="bar-pct">48%</span>
-        </div>
-        <div class="survey-bar">
-          <span class="bar-label">좀 길지만 OK</span>
-          <div class="bar-track"><div class="bar-fill" style="width:32%; background:var(--accent);"></div></div>
-          <span class="bar-pct">32%</span>
-        </div>
-        <div class="survey-bar">
-          <span class="bar-label">너무 길다</span>
-          <div class="bar-track"><div class="bar-fill" style="width:15%; background:var(--coral);"></div></div>
-          <span class="bar-pct">15%</span>
-        </div>
-        <div class="survey-bar">
-          <span class="bar-label">흥미롭다</span>
-          <div class="bar-track"><div class="bar-fill" style="width:5%; background:var(--gold);"></div></div>
-          <span class="bar-pct">5%</span>
-        </div>
+      <div class="card">
+        <div class="card-icon gold">❓</div>
+        <h3>가설 2: 24문항 온보딩 완료율</h3>
+        <p>
+          <strong>유추 근거:</strong> MBTI·성격 테스트 콘텐츠의 한국 내 높은 인기(관련 앱 수천만 다운로드)를 감안하면 거부감은 낮을 것으로 추정. 단, 가입 직후 24문항은 이탈 유발 가능.
+          <br><br>
+          <strong>설문 문항 제안:</strong> "가입 시 24개 성격 분석 질문에 답하는 것에 대해 어떻게 느끼십니까? (흥미롭다 / 해볼 만하다 / 좀 길다 / 너무 길어 포기)"
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-icon gold">❓</div>
+        <h3>가설 3: "성격 궁합 매칭"에 대한 기대감</h3>
+        <p>
+          <strong>유추 근거:</strong> 데이팅앱 미이용 이유 1위가 "진정성 부족(75.7%)"이므로, 과학적 성격 분석이 차별화 포인트가 될 수 있음. 다만 "또 다른 알고리즘"에 대한 피로감도 존재할 수 있음.
+          <br><br>
+          <strong>설문 문항 제안:</strong> "Big Five 성격 이론 기반 궁합 매칭에 대해 기대되십니까? (매우 기대 / 기대하는 편 / 반신반의 / 관심 없음)"
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-icon gold">❓</div>
+        <h3>가설 4: 유입 채널 선호도</h3>
+        <p>
+          <strong>유추 근거:</strong> 2030세대 연인 만남 경로 1위가 소개팅(25.8%), 30대의 데이팅앱 이용은 ~10% 수준. 네이버 블로그 검색("결혼정보회사 비교" 등)과 인스타그램이 주요 인지 채널일 것으로 추정.
+          <br><br>
+          <strong>설문 문항 제안:</strong> "결혼 관련 정보를 주로 어디서 얻습니까? (인스타그램/네이버검색/유튜브/지인추천/기타)"
+        </p>
       </div>
     </div>
 
     <!-- 조사 방법론 -->
     <div style="margin-top:48px;">
-      <h3 style="font-weight:600; font-size:18px; margin-bottom:20px;">실행 조사 방법론</h3>
+      <h3 style="font-weight:600; font-size:18px; margin-bottom:20px;">D. 실행 조사 방법론</h3>
       <div class="card-grid cols-2">
         <div class="card">
           <div class="card-icon lavender">📋</div>
@@ -1198,7 +1268,7 @@
           <p>
             <strong>대상:</strong> 사전등록 유저 + SNS 타겟 광고 응답자 200~300명<br>
             <strong>도구:</strong> Typeform / Google Forms<br>
-            <strong>내용:</strong> 결혼 의향, 기존 서비스 경험, 가격 민감도, 기능 선호도, 채널 인지 경로<br>
+            <strong>핵심 문항:</strong> 위 가설 1~4 검증 문항 + 결혼 의향·기존 서비스 경험·가격 민감도·채널 인지 경로<br>
             <strong>인센티브:</strong> 응답 완료 시 결이음권 50% 할인 쿠폰
           </p>
         </div>
@@ -1208,7 +1278,7 @@
           <p>
             <strong>대상:</strong> 서베이 응답자 중 결혼 의향 상위 15~20명<br>
             <strong>형식:</strong> 30분 화상/대면 인터뷰<br>
-            <strong>내용:</strong> 결혼 탐색 여정(Journey Map), 기존 서비스 불만점, 결하다 컨셉 반응, 가격 수용도 깊이 탐색<br>
+            <strong>핵심 탐색:</strong> 결혼 탐색 여정(Journey Map), 결정사 미이용 심리적 장벽, 만남당 결제 모델 심층 반응, "진정성" 구성 요소 규명<br>
             <strong>인센티브:</strong> 인터뷰 참가자 결이음권 1회 무료
           </p>
         </div>
