@@ -556,6 +556,122 @@
     flex-shrink: 0;
   }
 
+  /* ─── Region Master List ─── */
+  .region-master {
+    margin-top: 48px;
+    padding: 40px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+  }
+
+  .region-master h3 {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  .region-master .subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+  }
+
+  .region-group {
+    margin-bottom: 28px;
+  }
+
+  .region-group:last-child { margin-bottom: 0; }
+
+  .region-group-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .region-group-title.seoul { color: var(--accent); }
+  .region-group-title.gyeonggi { color: var(--teal); }
+  .region-group-title.incheon { color: var(--coral); }
+  .region-group-title.metro { color: var(--gold); }
+
+  .region-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .region-chip {
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    color: var(--text-secondary);
+    transition: border-color 0.2s;
+  }
+
+  .region-chip:hover {
+    border-color: var(--accent);
+    color: var(--text-primary);
+  }
+
+  .region-chip.mkt-core {
+    background: var(--accent-soft);
+    border-color: rgba(108, 99, 255, 0.3);
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .region-chip.mkt-active {
+    background: var(--teal-soft);
+    border-color: rgba(78, 205, 196, 0.25);
+    color: var(--text-primary);
+  }
+
+  .region-chip.match-ready {
+    background: var(--gold-soft);
+    border-color: rgba(255, 217, 61, 0.25);
+    color: var(--text-primary);
+  }
+
+  .region-chip.match-standby {
+    background: var(--surface-2);
+    color: var(--text-secondary);
+  }
+
+  .region-legend {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    padding: 12px 16px;
+    background: var(--surface-2);
+    border-radius: 10px;
+  }
+
+  .region-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  .region-legend-dot {
+    width: 12px; height: 12px;
+    border-radius: 4px;
+  }
+
+  .region-legend-dot.mkt-core { background: var(--accent-soft); border: 1px solid rgba(108,99,255,0.3); }
+  .region-legend-dot.mkt-active { background: var(--teal-soft); border: 1px solid rgba(78,205,196,0.25); }
+  .region-legend-dot.match-ready { background: var(--gold-soft); border: 1px solid rgba(255,217,61,0.25); }
+  .region-legend-dot.match-standby { background: var(--surface-3); border: 1px solid var(--border); }
+
   /* ─── Footer ─── */
   footer {
     padding: 60px 0;
@@ -704,6 +820,513 @@
         </p>
       </div>
     </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ═══════════════════ 1-B. 지역 전략 ═══════════════════ -->
+<section>
+  <div class="container">
+    <div class="section-num">Section 01-B</div>
+    <h2 class="section-title">지역 전략 — 가입은 전국, 마케팅은 수도권</h2>
+    <p class="section-desc">
+      가입 자체를 지역으로 제한하지 않습니다. 전국 광역시·특례시를 포함한 주요 도시에서 가입을 받되,
+      마케팅 예산과 매칭 운영 밀도는 수도권에 집중합니다.
+    </p>
+
+    <!-- ── 전략 전환 근거 ── -->
+    <div class="callout" style="margin-top:32px;">
+      <div class="callout-label purple">전략 전환 근거 — 팀 내부 논의 반영</div>
+      <p>
+        <strong>① 이탈 방지:</strong> 지방 유저가 결하다를 발견했을 때 "서울/경기만 됩니다"가 뜨면 이탈하고, 나중에 확장해도 재방문하지 않습니다. 초기에 모든 가입자가 소중한 시점에서 이건 회복 불가능한 손실입니다.
+        <br><br>
+        <strong>② 기술적 가능:</strong> 알고리즘 레벨에서 지역별 parallel 매칭 처리가 가능하며, 지역별 matching config를 다르게 설정할 수 있습니다.
+        <br><br>
+        <strong>③ 매칭 대기 안내로 해결:</strong> 지방 지역은 가입은 받되 "아직 회원분이 많지 않아 매칭이 다소 지연될 수 있습니다"를 가입 시점에 안내. 내부적으로 해당 지역 남녀 각 30명 이상 확보 시 매칭을 시작합니다.
+        <br><br>
+        <strong>④ 지역 제한 없는 마케팅:</strong> 마케팅 소재에서 "서울/경기 전용"이라는 제약을 노출할 필요가 없으므로, 브랜드 메시지가 깔끔해집니다.
+      </p>
+    </div>
+
+    <div class="callout coral" style="margin-top:16px;">
+      <div class="callout-label coral">주의 사항 — 매칭 품질 리스크</div>
+      <p>
+        지역에 따라 직업·외모 등의 기준이 달라 매칭 품질이 오락가락할 수 있습니다. 지역별 matching config를 분리하고, internal run으로 검증한 후 해당 지역 매칭을 활성화하는 단계적 접근이 필요합니다.
+      </p>
+    </div>
+
+    <!-- ── 운영 구조: 4 Layer ── -->
+    <h3 style="font-weight:600; font-size:18px; margin-top:48px; margin-bottom:24px;">운영 구조: 마케팅 집중도 × 매칭 운영 상태</h3>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width:18%">구분</th>
+          <th style="width:22%">마케팅</th>
+          <th style="width:22%">매칭 운영</th>
+          <th style="width:18%">가입</th>
+          <th>해당 지역</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong style="color:var(--accent);">🟣 마케팅 핵심</strong></td>
+          <td>예산 90% 집중<br>콘텐츠·퍼포먼스·오프라인</td>
+          <td>D-Day부터 즉시 매칭<br>첫 매칭 7일 내 보장</td>
+          <td>완전 오픈</td>
+          <td>서울 강남·서초·송파·성동·용산·마포·영등포 + 판교/분당</td>
+        </tr>
+        <tr>
+          <td><strong style="color:var(--teal);">🟢 마케팅 활성</strong></td>
+          <td>예산 8%<br>SNS 타겟 광고 + 기업 제휴</td>
+          <td>D+30부터 매칭 시작<br>(풀 확보 후)</td>
+          <td>완전 오픈</td>
+          <td>서울 나머지 + 경기(수원·용인·화성·이천·평택·고양·의정부·남양주·과천·광명·안양·하남·김포·시흥·군포·의왕·오산·파주) + 인천</td>
+        </tr>
+        <tr>
+          <td><strong style="color:var(--gold);">🟡 매칭 준비</strong></td>
+          <td>예산 2%<br>오가닉 SEO만</td>
+          <td>지역 남녀 각 30명+ 확보 시 활성화<br>그 전까지 "매칭 준비 중" 안내</td>
+          <td>완전 오픈</td>
+          <td>5대 광역시(부산·대구·대전·광주·울산) + 세종</td>
+        </tr>
+        <tr>
+          <td><strong style="color:var(--text-muted);">⚪ 매칭 대기</strong></td>
+          <td>별도 예산 없음</td>
+          <td>가입만 받고 매칭 보류<br>"회원 확보 중" 안내</td>
+          <td>완전 오픈</td>
+          <td>특례시(창원·청주·천안·전주) + 안산·광주(경기)·양주·동두천·포천·여주·양평·가평 등</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ── 수도권 마케팅 집중 지역 상세 ── -->
+    <h3 style="font-weight:600; font-size:18px; margin-top:48px; margin-bottom:8px; display:flex; align-items:center; gap:10px;">
+      <span style="display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:8px; background:var(--accent-soft); color:var(--accent); font-size:13px; font-weight:700;">A</span>
+      마케팅 핵심 지역 — 수도권 상세
+    </h3>
+    <p style="font-size:13px; color:var(--text-muted); margin-bottom:20px;">마케팅 예산 90%가 투입되는 지역. 런칭 직후 매칭 밀도를 확보할 최우선 구역입니다.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width:12%">구분</th>
+          <th style="width:18%">지역</th>
+          <th style="width:25%">핵심 동네 / 업무지구</th>
+          <th style="width:20%">타겟 유저 근거</th>
+          <th>비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="5" style="font-weight:600; color:var(--accent);">서울<br>강남권</td>
+          <td><strong>강남구</strong></td>
+          <td>역삼동, 삼성동, 논현동, 대치동, 신사동</td>
+          <td>서울 일자리 30%가 강남3구 집중</td>
+          <td>IT·금융·전문직 밀집. 30대 1인가구 밀집 1위</td>
+        </tr>
+        <tr>
+          <td><strong>서초구</strong></td>
+          <td>서초동, 반포동, 잠원동, 방배동</td>
+          <td>법조타운, 대기업 본사 다수</td>
+          <td>전문직(법률·회계) 밀집 지역</td>
+        </tr>
+        <tr>
+          <td><strong>송파구</strong></td>
+          <td>잠실동, 문정동, 가락동, 신천동</td>
+          <td>문정법조단지, 롯데타워 업무지구</td>
+          <td>30대 직장인 거주 선호도 높은 생활 인프라</td>
+        </tr>
+        <tr>
+          <td><strong>성동구</strong></td>
+          <td>성수동1·2가, 금호동</td>
+          <td>성수 업무지구 근무자 수 전국 5위</td>
+          <td>IT·스타트업·크리에이티브 업종, 젊은 직장인 급증</td>
+        </tr>
+        <tr>
+          <td><strong>용산구</strong></td>
+          <td>한남동, 이태원동, 용산역 일대</td>
+          <td>용산 국제업무지구, 하이브·아모레 본사 이전</td>
+          <td>향후 성장 거점, 강남·여의도 중간 허브</td>
+        </tr>
+        <tr>
+          <td rowspan="2" style="font-weight:600; color:var(--accent);">서울<br>마포·여의도</td>
+          <td><strong>마포구</strong></td>
+          <td>상암동, 합정동, 연남동, 공덕동</td>
+          <td>상암 미디어시티, 스타트업·광고업</td>
+          <td>2030 거주 선호도 상위</td>
+        </tr>
+        <tr>
+          <td><strong>영등포구</strong></td>
+          <td>여의도동, 영등포동, 당산동</td>
+          <td>여의도 금융가</td>
+          <td>금융·증권·보험 전문직 밀집</td>
+        </tr>
+        <tr>
+          <td rowspan="2" style="font-weight:600; color:var(--accent);">경기<br>판교·분당</td>
+          <td><strong>성남시 분당구</strong></td>
+          <td>판교테크노밸리, 정자동, 서현동</td>
+          <td>근무자 평균 연령 39세 (전국 업무지구 유일 30대)</td>
+          <td>IT·게임·플랫폼 기업 밀집</td>
+        </tr>
+        <tr>
+          <td><strong>성남시 중원·수정구</strong></td>
+          <td>모란역, 수진역, 태평역 일대</td>
+          <td>분당·판교 직장인 실거주지</td>
+          <td>8호선·수인분당선 접근</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ── 수도권 마케팅 활성 지역 ── -->
+    <h3 style="font-weight:600; font-size:18px; margin-top:48px; margin-bottom:8px; display:flex; align-items:center; gap:10px;">
+      <span style="display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:8px; background:var(--teal-soft); color:var(--teal); font-size:13px; font-weight:700;">B</span>
+      마케팅 활성 지역 — 수도권 확장
+    </h3>
+    <p style="font-size:13px; color:var(--text-muted); margin-bottom:20px;">SNS 타겟 광고와 기업 제휴로 유저를 확보합니다. 서울 전역 + 경기 주요 신도시·위성도시 + 인천 핵심구를 포함. D+30부터 매칭 풀 확보 후 순차 매칭 시작.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width:12%">구분</th>
+          <th style="width:18%">지역</th>
+          <th style="width:28%">핵심 동네</th>
+          <th>타겟 유저 근거 / 비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="4" style="font-weight:600; color:var(--teal);">서울<br>나머지</td>
+          <td>광진·강서구</td>
+          <td>건대입구, 마곡 R&D 단지</td>
+          <td>2030 1인가구 밀집, LG·코오롱·넥센 대기업 입주</td>
+        </tr>
+        <tr>
+          <td>종로·중구</td>
+          <td>광화문, 을지로, 명동</td>
+          <td>사대문 업무지구 — 근무자 수 전국 1위</td>
+        </tr>
+        <tr>
+          <td>구로·금천구</td>
+          <td>가산디지털단지</td>
+          <td>면적당 근무자 수 전국 1위, IT·제조 R&D</td>
+        </tr>
+        <tr>
+          <td>나머지 12개구</td>
+          <td>강동·동작·관악·양천·서대문·노원 등</td>
+          <td>서울 전역 커버. 가입 제한 없이 자연 확산</td>
+        </tr>
+        <tr>
+          <td rowspan="5" style="font-weight:600; color:var(--teal);">경기 남부<br>(반도체밸리)</td>
+          <td>수원시</td>
+          <td>영통구 (삼성전자 수원), 광교신도시</td>
+          <td>삼성전자 본사·연구소, 수인분당선·신분당선</td>
+        </tr>
+        <tr>
+          <td>용인시</td>
+          <td>수지구, 기흥구 (삼성·SK 캠퍼스)</td>
+          <td>반도체 클러스터(2027 준공), 신분당선 직결</td>
+        </tr>
+        <tr>
+          <td>화성시</td>
+          <td>동탄1·2신도시</td>
+          <td>30대 직장인 순유입 급증, GTX 기대</td>
+        </tr>
+        <tr>
+          <td>이천시</td>
+          <td>부발읍 (SK하이닉스 본사)</td>
+          <td>시총 500조+ HBM 대세 기업. 30대 고소득 엔지니어 대규모 거주</td>
+        </tr>
+        <tr>
+          <td>평택시</td>
+          <td>고덕국제신도시, 삼성전자 평택캠퍼스</td>
+          <td>세계 최대 반도체 공장. SRT 평택지제역 서울 30분</td>
+        </tr>
+        <tr>
+          <td rowspan="3" style="font-weight:600; color:var(--teal);">경기 북부<br>+ 인천</td>
+          <td>의정부·남양주·구리</td>
+          <td>별내·다산신도시, 의정부역</td>
+          <td>경기 북부 거점. 7호선·경의중앙선·별내선(8호선) 서울 직결</td>
+        </tr>
+        <tr>
+          <td>고양시·부천시</td>
+          <td>일산, 킨텍스, 부천역</td>
+          <td>GTX-A 개통으로 서울 접근성 개선</td>
+        </tr>
+        <tr>
+          <td>인천 (연수·부평·남동)</td>
+          <td>송도국제도시, 부평역</td>
+          <td>외국계·바이오·IT, 수인분당선 연결. 인천 내 우선 진입</td>
+        </tr>
+        <tr>
+          <td rowspan="5" style="font-weight:600; color:var(--teal);">경기 서남부<br>+ 서부</td>
+          <td>과천시</td>
+          <td>정부과천청사, 과천역</td>
+          <td>공무원 밀집, 4호선 사당~강남 직결. 집값 강남 수준. 인구 적지만 직주근접 고소득 비율 극히 높음</td>
+        </tr>
+        <tr>
+          <td>광명시</td>
+          <td>KTX광명역, 광명시흥테크노밸리</td>
+          <td>서울 구로·금천 생활권, 7호선 연결. 최근 집값 급등으로 30대 직장인 유입 증가</td>
+        </tr>
+        <tr>
+          <td>안양시 (평촌)</td>
+          <td>평촌신도시(동안구), 안양역</td>
+          <td>4호선·1호선 서울 직결, IT·제조 기업 다수. 평촌은 학군+직장인 거주지로 집값 상위</td>
+        </tr>
+        <tr>
+          <td>하남시</td>
+          <td>미사강변도시, 스타필드 하남</td>
+          <td>5호선 연장으로 강남 30분. 30대 신혼·직장인 대거 유입. 신도시 특성상 타겟 비율 높음</td>
+        </tr>
+        <tr>
+          <td>김포시</td>
+          <td>한강신도시, 김포공항 환승</td>
+          <td>인구 폭증, 골드라인+김포공항 환승으로 서울 접근. 30대 거주 비율 높음</td>
+        </tr>
+        <tr>
+          <td rowspan="4" style="font-weight:600; color:var(--teal);">경기 위성도시<br>+ 신도시</td>
+          <td>시흥시</td>
+          <td>배곧신도시, 시흥시청역</td>
+          <td>수인분당선 개통으로 판교·강남 직결. 신도시 특성상 30대 비율 높음</td>
+        </tr>
+        <tr>
+          <td>군포·의왕시</td>
+          <td>산본신도시, 의왕역</td>
+          <td>수원·안양 생활권 위성도시. 4호선·1호선 연결. 서울 출퇴근 직장인 다수</td>
+        </tr>
+        <tr>
+          <td>오산시</td>
+          <td>오산역, 세교신도시</td>
+          <td>수원·평택 매칭권. 1호선·SRT 접근. 삼성·SK 통근 직장인 거주</td>
+        </tr>
+        <tr>
+          <td>파주시</td>
+          <td>운정신도시, 파주출판단지</td>
+          <td>GTX-A로 서울 접근성 개선. 운정 중심 30대 유입 증가. LG디스플레이 파주 공장</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ── 전국 광역시: 매칭 준비 지역 ── -->
+    <h3 style="font-weight:600; font-size:18px; margin-top:48px; margin-bottom:8px; display:flex; align-items:center; gap:10px;">
+      <span style="display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:8px; background:var(--gold-soft); color:var(--gold); font-size:13px; font-weight:700;">C</span>
+      매칭 준비 지역 — 전국 광역시·특례시
+    </h3>
+    <p style="font-size:13px; color:var(--text-muted); margin-bottom:20px;">
+      가입은 D-Day부터 오픈. 별도 마케팅 없이 오가닉 유입을 받으며, 지역 내 남녀 각 30명 이상 확보 시 매칭을 시작합니다.<br>
+      미달 시 "아직 회원분이 많지 않아 매칭이 다소 지연될 수 있습니다" 안내.
+    </p>
+
+    <div class="card-grid cols-3" style="margin-top:24px;">
+      <div class="card">
+        <div class="card-icon gold">🏙️</div>
+        <h3>부산광역시</h3>
+        <p>해운대·센텀시티 IT밸리, 서면 상권. 30대 직장인 수 수도권 다음으로 많음. 매칭 활성화 가능성 가장 높은 지방 도시.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon gold">🏙️</div>
+        <h3>대구광역시</h3>
+        <p>수성구·중구 업무지구. 삼성 계열사 및 의료 클러스터. 영남권 거점.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon gold">🏙️</div>
+        <h3>대전광역시 + 세종시</h3>
+        <p>유성구 대덕연구단지, 세종시 정부청사. 연구직·공무원 밀집. 두 도시를 하나의 매칭권으로 묶어 운영.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon gold">🏙️</div>
+        <h3>광주광역시</h3>
+        <p>첨단과학산업단지, 상무지구. 호남권 거점.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon gold">🏙️</div>
+        <h3>울산광역시</h3>
+        <p>현대자동차·현대중공업 등 대기업 밀집. 고소득 30대 엔지니어 다수이나 결혼정보회사 진입이 적은 시장.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon gold">🏙️</div>
+        <h3>창원특례시 외</h3>
+        <p>창원·청주·천안·전주·포항·제주 등 인구 50만+ 도시. 가입은 오픈하되 매칭은 인원 확보 후 시작.</p>
+      </div>
+    </div>
+
+    <!-- ── 전국 전지역 마스터 리스트 ── -->
+    <div class="region-master">
+      <h3>📋 전국 가입 가능 전지역 리스트</h3>
+      <p class="subtitle">가입 제한 없음 — 마케팅 집중도와 매칭 운영 상태로 구분</p>
+
+      <div class="region-legend">
+        <div class="region-legend-item"><div class="region-legend-dot mkt-core"></div> 마케팅 핵심 (예산 90%)</div>
+        <div class="region-legend-item"><div class="region-legend-dot mkt-active"></div> 마케팅 활성 (예산 8%)</div>
+        <div class="region-legend-item"><div class="region-legend-dot match-ready"></div> 매칭 준비 (오가닉)</div>
+        <div class="region-legend-item"><div class="region-legend-dot match-standby"></div> 매칭 대기 (가입만)</div>
+      </div>
+
+      <!-- 서울 -->
+      <div class="region-group">
+        <div class="region-group-title seoul">서울특별시 — 25개 자치구 (전체)</div>
+        <div class="region-chips">
+          <span class="region-chip mkt-core">강남구</span>
+          <span class="region-chip mkt-core">서초구</span>
+          <span class="region-chip mkt-core">송파구</span>
+          <span class="region-chip mkt-core">성동구</span>
+          <span class="region-chip mkt-core">용산구</span>
+          <span class="region-chip mkt-core">마포구</span>
+          <span class="region-chip mkt-core">영등포구</span>
+          <span class="region-chip mkt-active">광진구</span>
+          <span class="region-chip mkt-active">강서구</span>
+          <span class="region-chip mkt-active">종로구</span>
+          <span class="region-chip mkt-active">중구</span>
+          <span class="region-chip mkt-active">구로구</span>
+          <span class="region-chip mkt-active">금천구</span>
+          <span class="region-chip mkt-active">강동구</span>
+          <span class="region-chip mkt-active">관악구</span>
+          <span class="region-chip mkt-active">동작구</span>
+          <span class="region-chip mkt-active">양천구</span>
+          <span class="region-chip mkt-active">서대문구</span>
+          <span class="region-chip mkt-active">동대문구</span>
+          <span class="region-chip mkt-active">성북구</span>
+          <span class="region-chip mkt-active">노원구</span>
+          <span class="region-chip mkt-active">강북구</span>
+          <span class="region-chip mkt-active">도봉구</span>
+          <span class="region-chip mkt-active">은평구</span>
+          <span class="region-chip mkt-active">중랑구</span>
+        </div>
+      </div>
+
+      <!-- 경기 -->
+      <div class="region-group">
+        <div class="region-group-title gyeonggi">경기도 — 31개 시군</div>
+        <div class="region-chips">
+          <span class="region-chip mkt-core">성남시 분당구</span>
+          <span class="region-chip mkt-core">성남시 중원구</span>
+          <span class="region-chip mkt-core">성남시 수정구</span>
+          <span class="region-chip mkt-active">수원시</span>
+          <span class="region-chip mkt-active">용인시</span>
+          <span class="region-chip mkt-active">화성시</span>
+          <span class="region-chip mkt-active">이천시</span>
+          <span class="region-chip mkt-active">평택시</span>
+          <span class="region-chip mkt-active">고양시</span>
+          <span class="region-chip mkt-active">의정부시</span>
+          <span class="region-chip mkt-active">남양주시</span>
+          <span class="region-chip mkt-active">구리시</span>
+          <span class="region-chip mkt-active">부천시</span>
+          <span class="region-chip mkt-active">과천시</span>
+          <span class="region-chip mkt-active">광명시</span>
+          <span class="region-chip mkt-active">안양시</span>
+          <span class="region-chip mkt-active">군포시</span>
+          <span class="region-chip mkt-active">의왕시</span>
+          <span class="region-chip mkt-active">오산시</span>
+          <span class="region-chip match-standby">안산시</span>
+          <span class="region-chip mkt-active">시흥시</span>
+          <span class="region-chip mkt-active">김포시</span>
+          <span class="region-chip mkt-active">파주시</span>
+          <span class="region-chip match-standby">광주시</span>
+          <span class="region-chip mkt-active">하남시</span>
+          <span class="region-chip match-standby">양주시</span>
+          <span class="region-chip match-standby">동두천시</span>
+          <span class="region-chip match-standby">포천시</span>
+          <span class="region-chip match-standby">여주시</span>
+          <span class="region-chip match-standby">양평군</span>
+          <span class="region-chip match-standby">가평군</span>
+        </div>
+      </div>
+
+      <!-- 인천 -->
+      <div class="region-group">
+        <div class="region-group-title incheon">인천광역시 — 10개 자치구군</div>
+        <div class="region-chips">
+          <span class="region-chip mkt-active">연수구</span>
+          <span class="region-chip mkt-active">남동구</span>
+          <span class="region-chip mkt-active">부평구</span>
+          <span class="region-chip match-standby">미추홀구</span>
+          <span class="region-chip match-standby">계양구</span>
+          <span class="region-chip match-standby">서구</span>
+          <span class="region-chip match-standby">중구</span>
+          <span class="region-chip match-standby">동구</span>
+          <span class="region-chip match-standby">강화군</span>
+          <span class="region-chip match-standby">옹진군</span>
+        </div>
+      </div>
+
+      <!-- 전국 광역시 -->
+      <div class="region-group">
+        <div class="region-group-title metro">전국 광역시·특례시·주요 도시</div>
+        <div class="region-chips">
+          <span class="region-chip match-ready">부산광역시</span>
+          <span class="region-chip match-ready">대구광역시</span>
+          <span class="region-chip match-ready">대전광역시</span>
+          <span class="region-chip match-ready">광주광역시</span>
+          <span class="region-chip match-ready">울산광역시</span>
+          <span class="region-chip match-ready">세종특별자치시</span>
+          <span class="region-chip match-standby">창원특례시</span>
+          <span class="region-chip match-standby">청주시</span>
+          <span class="region-chip match-standby">전주시</span>
+          <span class="region-chip match-standby">천안시</span>
+          <span class="region-chip match-standby">포항시</span>
+          <span class="region-chip match-standby">제주시</span>
+        </div>
+      </div>
+
+      <!-- 매칭 활성화 룰 -->
+      <div style="margin-top:24px; padding:16px 20px; background:var(--surface-2); border-radius:12px; border-left:3px solid var(--gold);">
+        <p style="font-size:13px; font-weight:600; color:var(--gold); margin-bottom:6px;">매칭 활성화 기준</p>
+        <p style="font-size:13px; color:var(--text-muted); line-height:1.7;">
+          매칭 준비·대기 지역은 다음 조건 충족 시 매칭을 시작합니다:<br>
+          ① 해당 지역 남녀 각 <strong>30명 이상</strong> 가입 완료 (검증 포함)<br>
+          ② Internal run으로 <strong>매칭 품질 검증</strong> 통과 (지역별 matching config 적용)<br>
+          ③ 유저에게 <strong>"매칭이 시작되었습니다"</strong> 알림 발송 → 리텐션 재활성화
+        </p>
+      </div>
+
+      <!-- 요약 카운트 -->
+      <div style="margin-top:28px; padding:16px 20px; background:var(--surface-2); border-radius:12px; display:flex; gap:20px; flex-wrap:wrap; justify-content:center;">
+        <div style="text-align:center;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:1.3rem; font-weight:700; color:var(--accent);">10</div>
+          <div style="font-size:11px; color:var(--text-muted);">마케팅 핵심</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:1.3rem; font-weight:700; color:var(--teal);">41</div>
+          <div style="font-size:11px; color:var(--text-muted);">마케팅 활성</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:1.3rem; font-weight:700; color:var(--gold);">6</div>
+          <div style="font-size:11px; color:var(--text-muted);">매칭 준비</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:1.3rem; font-weight:700; color:var(--text-muted);">21</div>
+          <div style="font-size:11px; color:var(--text-muted);">매칭 대기</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:1.3rem; font-weight:700; color:var(--text-primary);">78</div>
+          <div style="font-size:11px; color:var(--text-muted);">전국 가입 가능 합계</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 만남 장소 거점 ── -->
+    <div class="callout teal" style="margin-top:40px;">
+      <div class="callout-label teal">만남 장소 거점</div>
+      <p>
+        수도권 매칭 기준 만남 추천 거점:
+        <strong>강남역·역삼역</strong> (강남권+판교 교차점),
+        <strong>합정·홍대입구역</strong> (마포+여의도+서북권),
+        <strong>잠실역</strong> (송파+성동+성남),
+        <strong>판교역</strong> (경기 남부 자체 거점).
+        지방 광역시는 각 도시 중심 상권(서면/수성/유성 등)을 기본 추천. 유저가 매칭 지역을 자유롭게 변경할 수 있으므로, 부산 유저가 서울 출장 시 서울 매칭을 요청하는 것도 가능합니다.
+      </p>
+    </div>
+
+    <!-- ── 출처 ── -->
+    <p style="font-size:11px; color:var(--text-muted); margin-top:24px; line-height:1.8;">
+      📎 지역별 업무지구 근무자 수·평균 연령: SK텔레콤 리트머스, 「대한민국 오피스 지도」 (2023)<br>
+      📎 서울 일자리 강남3구 집중도: 경향신문, 「쏠림 사회 한국, 강남 리포트」 (2023.10)<br>
+      📎 SK하이닉스 본사 이천시 소재: 위키백과·나무위키, SK하이닉스 문서 (2026.04 확인)<br>
+      📎 전략 전환 근거: 결하다 내부 슬랙 논의 (2026.04) — 정훈·성우·쩬킴 의견 종합
+    </p>
   </div>
 </section>
 
